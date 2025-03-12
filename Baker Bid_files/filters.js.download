@@ -1,0 +1,224 @@
+$(document).ready(function () {
+
+    function toggleCompetitorAwardedRequired() {
+        var projectStatus = $("form.bid_form #id_project_status").val();
+        var competitorAwardedField = $("form.bid_form #id_competitor_awarded");
+
+        if (projectStatus === 'lost' && !competitorAwardedField.val()) {
+            alert('You must enter the competitor awarded value. (On the Postbid info).');
+        }
+    }
+
+    // Check on change on project status
+    $("form.bid_form #id_project_status").on('change', function () {
+        toggleCompetitorAwardedRequired();
+    });
+
+    // Check if the select is empty
+    if (!$('select#id_estimator').val() && currentUser.id) {
+        $('select#id_estimator').val(currentUser.id);
+        $(".filter_form").submit();
+    }
+
+    $(".filter_form select").on('change', function () {
+        $(".filter_form").submit();
+    });
+
+    $(".filter_form #id_search").on('keypress', function (e) {
+        var code = e.keyCode || e.which;
+        if (code === 13) {
+            $(".filter_form").submit();
+        }
+    });
+
+    $("form.bid_form #id_joint_venture").on('change', function () {
+        var selected = $("form.bid_form #id_project_status").find(":selected").val();
+        if (selected === 'sold') {
+            if ($(this).is(':checked')) {
+                $(".jv_division_triangle").removeClass('hidden');
+                $(".jv_division_prefab").removeClass('hidden');
+                $(".jv_division_other").removeClass('hidden');
+            } else {
+                if (!$(".jv_division_triangle").hasClass('hidden')) {
+                    $(".jv_division_triangle").addClass('hidden');
+                }
+                if (!$(".jv_division_prefab").hasClass('hidden')) {
+                    $(".jv_division_prefab").addClass('hidden');
+                }
+                if (!$(".jv_division_other").hasClass('hidden')) {
+                    $(".jv_division_other").addClass('hidden');
+                }
+            }
+        } else {
+            if (!$(".jv_division_triangle").hasClass('hidden')) {
+                $(".jv_division_triangle").addClass('hidden');
+            }
+            if (!$(".jv_division_prefab").hasClass('hidden')) {
+                $(".jv_division_prefab").addClass('hidden');
+            }
+            if (!$(".jv_division_other").hasClass('hidden')) {
+                $(".jv_division_other").addClass('hidden');
+            }
+        }
+    });
+
+    $("form.bid_form #id_project_status").on('change', function () {
+        var selected = $(this).find(":selected").val();
+        $("form.bid_form #id_joint_venture").change();
+        if (selected === 'sold') {
+            $(".compliance_ocip").removeClass('hidden');
+            $(".compliance_bonded").removeClass('hidden');
+            $(".compliance_tax_exempt").removeClass('hidden');
+            $(".compliance_cert_pr").removeClass('hidden');
+            $(".compliance_everify").removeClass('hidden');
+            $(".compliance_sb9").removeClass('hidden');
+            $(".compliance_cip").removeClass('hidden');
+            $(".sold_margin").removeClass('hidden');
+            $(".contract_amount").removeClass('hidden');
+            $(".final_contract_amount").removeClass('hidden');
+            $(".final_margin").removeClass('hidden');
+            $(".plexxis_job_number").removeClass('hidden');
+            $(".postbid_notes").removeClass('hidden');
+            if (!$(".competitor_awarded").hasClass('hidden')) {
+                $(".competitor_awarded").addClass('hidden');
+            }
+            if (!$(".competitor_amount").hasClass('hidden')) {
+                $(".competitor_amount").addClass('hidden');
+            }
+        } else if (selected === 'lost') {
+            $(".competitor_awarded").removeClass('hidden');
+            $(".competitor_amount").removeClass('hidden');
+            if (!$(".compliance_ocip").hasClass('hidden')) {
+                $(".compliance_ocip").addClass('hidden');
+            }
+            if (!$(".compliance_bonded").hasClass('hidden')) {
+                $(".compliance_bonded").addClass('hidden');
+            }
+            if (!$(".compliance_tax_exempt").hasClass('hidden')) {
+                $(".compliance_tax_exempt").addClass('hidden');
+            }
+            if (!$(".compliance_cert_pr").hasClass('hidden')) {
+                $(".compliance_cert_pr").addClass('hidden');
+            }
+            if (!$(".compliance_everify").hasClass('hidden')) {
+                $(".compliance_everify").addClass('hidden');
+            }
+            if (!$(".compliance_sb9").hasClass('hidden')) {
+                $(".compliance_sb9").addClass('hidden');
+            }
+            if (!$(".compliance_cip").hasClass('hidden')) {
+                $(".compliance_cip").addClass('hidden');
+            }
+            if (!$(".sold_margin").hasClass('hidden')) {
+                $(".sold_margin").addClass('hidden');
+            }
+            if (!$(".contract_amount").hasClass('hidden')) {
+                $(".contract_amount").addClass('hidden');
+            }
+        } else {
+            if (!$(".competitor_awarded").hasClass('hidden')) {
+                $(".competitor_awarded").addClass('hidden');
+            }
+            if (!$(".competitor_amount").hasClass('hidden')) {
+                $(".competitor_amount").addClass('hidden');
+            }
+            if (!$(".compliance_ocip").hasClass('hidden')) {
+                $(".compliance_ocip").addClass('hidden');
+            }
+            if (!$(".compliance_bonded").hasClass('hidden')) {
+                $(".compliance_bonded").addClass('hidden');
+            }
+            if (!$(".compliance_tax_exempt").hasClass('hidden')) {
+                $(".compliance_tax_exempt").addClass('hidden');
+            }
+            if (!$(".compliance_cert_pr").hasClass('hidden')) {
+                $(".compliance_cert_pr").addClass('hidden');
+            }
+            if (!$(".compliance_everify").hasClass('hidden')) {
+                $(".compliance_everify").addClass('hidden');
+            }
+            if (!$(".compliance_sb9").hasClass('hidden')) {
+                $(".compliance_sb9").addClass('hidden');
+            }
+            if (!$(".compliance_cip").hasClass('hidden')) {
+                $(".compliance_cip").addClass('hidden');
+            }
+            if (!$(".sold_margin").hasClass('hidden')) {
+                $(".sold_margin").addClass('hidden');
+            }
+            if (!$(".contract_amount").hasClass('hidden')) {
+                $(".contract_amount").addClass('hidden');
+            }
+        }
+    });
+
+    $('a[id*="add_architect_select"], a[id*="add_attachment_input"], a[id*="add_postbidattachment_input"], a[id*="add_architect_input"], a[id*="add_gc_input"]').on('click', function (e) {
+        e.preventDefault();
+        var id = $(this).attr('id');
+        var current_element_index = id.split('_')[3];
+        var next_element_index = parseInt(current_element_index) + 1;
+        var next_element_class_name = id.replace('add_', '');
+
+        next_element_class_name = next_element_class_name.replace(current_element_index, next_element_index);
+
+        $("div." + next_element_class_name.replace('input', 'select')).removeClass('hidden');
+        $("div." + next_element_class_name).removeClass('hidden');
+        $("#" + id).addClass('hidden');
+    });
+
+    $('a[id*="delete_architect_select"], a[id*="delete_attachment_input"], a[id*="delete_postbidattachment_input"], a[id*="delete_architect_input"], a[id*="delete_gc_input"]').on('click', function (e) {
+        e.preventDefault();
+
+        if (!confirm('Are you sure you want to delete this?')) {
+            return false;
+        }
+
+        var id = $(this).attr('id');
+        var current_element_index = id.split('_')[3];
+        var previous_element_index = parseInt(current_element_index) - 1;
+        var current_element_class_name = id.replace('delete_', '');
+
+        $("div." + current_element_class_name.replace('input', 'select')).addClass('hidden');
+        $("div." + current_element_class_name).addClass('hidden');
+
+        $('#id_' + current_element_class_name.replace('input', 'select')).val('');
+        $('#id_' + current_element_class_name).val('');
+
+        $("#" + id.replace('delete', 'add').replace(current_element_index, previous_element_index)).removeClass('hidden');
+    });
+
+    $('a[id*="add_alternate_pricing"]').on('click', function (e) {
+        e.preventDefault();
+        var id = $(this).attr('id');
+        var current_element_index = id.split('_')[3];
+        var next_element_index = parseInt(current_element_index) + 1;
+        var next_element_class = id.replace('add_', '');
+        next_element_class = next_element_class.replace(current_element_index, next_element_index);
+        $("div." + next_element_class).removeClass('hidden');
+        $("#" + id).addClass('hidden');
+    });
+
+    $("a.set_timestamp").on('click', function (e) {
+        e.preventDefault();
+        var user = $(this).attr('data-user');
+        var date = new Date().toLocaleString();
+        var append_text = "[" + user + " " + date + "]\n";
+        var current_text = $(this).parent().find('textarea').val();
+        $(this).parent().find('textarea').val(current_text + append_text);
+    });
+
+    $("a.accordion-toggle").on('click', function () {
+        var aria = $(this).attr('aria-expanded') || 'false';
+        if ( aria === 'false') {
+            $("a.accordion-toggle").not(this).each(function () {
+                $(this).addClass('collapsed');
+                $(this).attr('aria-expanded', false);
+                $(this).parent().parent().find('.accordion-body').attr('aria-expanded', false);
+                $(this).parent().parent().find('.accordion-body').removeClass('in');
+            });
+        }
+    });
+
+    $("form.bid_form #id_joint_venture").change();
+    $("form.bid_form #id_project_status").change();
+});

@@ -1,0 +1,85 @@
+/* Main Layout Styles */
+.main-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  width: calc(100% - var(--sidebar-width));
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-xl);
+  background-color: var(--white);
+  height: var(--header-height);
+}
+
+.page-title {
+  font-size: var(--font-size-xl);
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+/* Accordion Sections */
+.section {
+  margin: var(--spacing-lg);
+  background-color: var(--white);
+  overflow: hidden;
+  margin-bottom: var(--spacing-lg);
+}
+
+.section-header {
+  background-color: var(--primary-color);
+  padding: var(--spacing-md) var(--spacing-lg);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: var(--spacing-lg);
+
+  border-radius: var(--border-radius-lg);
+}
+
+.section-header h2 {
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+}
+
+/* .section-content {
+} */
+
+/* For grids of form elements */
+.form-section {
+  padding: var(--spacing-lg);
+
+  border-radius: var(--border-radius-lg);
+  background-color: var(--gray);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.scope-type-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  padding: 24px;
+  background-color: var(--white);
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}

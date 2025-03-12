@@ -1,0 +1,117 @@
+/* Responsive Styles */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  :root {
+    --sidebar-width: 200px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col-6 {
+    width: 100%;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  :root {
+    --sidebar-width: 250px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: var(--sidebar-width);
+    position: fixed;
+    left: -var(--sidebar-width);
+    top: 0;
+    bottom: 0;
+    transition: left var(--transition-normal);
+    z-index: var(--z-index-fixed);
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .header {
+    padding: var(--spacing-sm);
+  }
+
+  .section {
+    margin: var(--spacing-sm);
+  }
+
+  .section-content {
+    padding: var(--spacing-md);
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    margin-right: var(--spacing-md);
+  }
+  .page-title {
+    margin-left: 50px;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .section-content {
+    padding: var(--spacing-sm);
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-col {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .section-header h2 {
+    font-size: var(--font-size-md);
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  header .btn {
+    width: 100px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .page-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .checkbox-item {
+    flex: 1 1 50%;
+  }
+}
