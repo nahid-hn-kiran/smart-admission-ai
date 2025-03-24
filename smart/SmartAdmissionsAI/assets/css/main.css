@@ -1152,10 +1152,6 @@ textarea:focus {
 /* single member page */
 
 /* Main Content */
-.single-member-main-content {
-  padding: 60px 0;
-}
-
 .single-member-main-content .profile-container {
   display: flex;
   flex-wrap: wrap;
@@ -1165,17 +1161,12 @@ textarea:focus {
 }
 
 .single-member-main-content .profile-image {
-  width: 310px;
-  height: 380px;
   border-radius: 6px;
-  overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .single-member-main-content .profile-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .single-member-main-content .profile-info {
@@ -1184,7 +1175,12 @@ textarea:focus {
   max-width: 600px;
 }
 
-.single-member-main-content .profile-info h1 {
+.single-member-main-content .profile-info .section-title,
+.single-member-main-content .profile-info .body-text {
+  text-align: start;
+}
+
+/* .single-member-main-content .profile-info h1 {
   font-size: 2.5rem;
   color: #333;
   margin-bottom: 5px;
@@ -1206,7 +1202,7 @@ textarea:focus {
   color: #777;
   line-height: 1.6;
   margin-bottom: 20px;
-}
+} */
 
 /* contact us page starte */
 .about-page-area .about-hero {
