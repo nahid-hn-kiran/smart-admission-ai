@@ -90,6 +90,13 @@ a:hover {
   margin-bottom: 0;
 }
 
+.review-subtitle {
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
 .nav-link {
   font-family: var(--font-exo);
   font-weight: 500;
