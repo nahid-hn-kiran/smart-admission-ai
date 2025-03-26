@@ -8,6 +8,9 @@
   .profile-form {
     padding: 60px;
   }
+  .desktop-nav ul {
+    column-gap: 25px;
+  }
 }
 
 /* Medium devices (tablets, less than 992px) */
@@ -83,6 +86,19 @@
   .contact-form {
     order: -1;
   }
+  #dashboard-menu-toggle {
+    display: block;
+  }
+  .tablet-dashboard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 100;
+  }
+  #dashboard-menu-close {
+    display: block;
+  }
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -91,7 +107,6 @@
     max-width: 540px;
   }
 
-  .desktop-nav,
   .auth-buttons {
     display: none;
   }
@@ -135,6 +150,16 @@
   }
   .profile-form {
     padding: 40px 20px;
+  }
+  nav.desktop-nav ul {
+    display: none;
+  }
+  #mobile-menu-toggle {
+    display: block;
+  }
+
+  .menu-toggler {
+    font-size: 18px;
   }
 }
 
@@ -182,5 +207,12 @@
   }
   .contact-form {
     padding: 30px 10px;
+  }
+  .btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+  }
+  .button-container {
+    flex-direction: column;
   }
 }

@@ -38,6 +38,16 @@
   transform: translateY(-2px);
 }
 
+.btn-accent {
+  border: 1px solid var(--primary-color);
+  border-radius: 30px;
+}
+
+.btn-accent:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
 /* Card Styles */
 .feature-card {
   background: var(--white);
@@ -130,7 +140,6 @@
 
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {
-  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;

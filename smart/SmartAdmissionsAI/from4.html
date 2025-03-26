@@ -36,35 +36,56 @@
       <div class="container">
         <div class="header-content">
           <div class="logo">
-            <img src="assets/images/logo.svg" alt="SmartAdmissionsAI Logo" />
+            <a href="index.html"
+              ><img src="assets/images/logo.svg" alt="SmartAdmissionsAI Logo"
+            /></a>
           </div>
           <nav class="desktop-nav">
             <ul>
-              <li><a href="#" class="active">Home</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Programs</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="contact-us.html">Contact</a></li>
+              <div class="menu-toggler" id="desktop-menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+              </div>
             </ul>
+            <div class="menu-toggler" id="mobile-menu-toggle">
+              <i class="fa-solid fa-bars"></i>
+            </div>
           </nav>
-          <div class="auth-buttons">
-            <a href="#" class="btn btn-primary">Log in</a>
+        </div>
+      </div>
+      <!-- Desktop Sidebar -->
+      <div class="desktop-sidebar">
+        <div class="sidebar">
+          <button class="btn btn-info" id="desktop-menu-close">✖ Close</button>
+          <div class="sidebar-nav">
+            <a href="saved-essays-&-feedback.html">Saved Essays & Feedback </a>
+            <a href="essasy-upload.html">Upload Essay </a>
+            <a href="profile-&-account-settings.html">Profile & Settings </a>
+            <a href="applicant-information.html">Applicant Information </a>
+            <a href="premium-review.html">Premium Review </a>
+            <a href="pricing-plan.html">Pricing & Plans </a>
           </div>
-          <div class="mobile-menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+          <a class="btn btn-primary" href="login.html">Login</a>
+        </div>
+      </div>
+      <!-- Mobile Sidebar -->
+      <div class="mobile-sidebar">
+        <div class="sidebar">
+          <button class="btn btn-info" id="mobile-menu-close">✖ Close</button>
+          <div class="sidebar-nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="#">Dashboard </a>
+            <a href="saved-essays-&-feedback.html">Saved Essays & Feedback </a>
+            <a href="essasy-upload.html">Upload Essay </a>
+            <a href="profile-&-account-settings.html">Profile & Settings </a>
+            <a href="applicant-information.html">Applicant Information </a>
+            <a href="premium-review.html">Premium Review </a>
+            <a href="pricing-plan.html">Pricing & Plans </a>
+            <a class="btn btn-primary" href="login.html">Login</a>
           </div>
         </div>
-        <nav class="mobile-nav">
-          <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Programs</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
       </div>
     </header>
     <!-- Page Header -->
@@ -84,123 +105,556 @@
             <a href="#academic" class="tab">Academic Journey</a>
             <a href="#extracurricular" class="tab active">Extracurriculars</a>
           </div>
-          <div class="profile-form-container container-grid">
-            <h3 class="form-title">Academics & Intellectual Pursuits</h3>
-            <form class="form">
-              <div class="form-row">
-                <div class="form4-group">
-                  <div class="form4-group-main">
-                    <div class="form4-first-label">
-                      <label for="type">Type</label>
-                    </div>
-                    <div class="form4-first-input">
-                      <div class="custom-select">
-                        <select id="type">
-                          <option value="olympiad">Olympiad</option>
-                          <option value="competition">Competition</option>
-                          <option value="research">Research</option>
-                        </select>
-                      </div>
-                      <div class="custom-select">
-                        <select id="activity">
-                          <option value="journalism">Writing/Journalism</option>
-                          <option value="debate">Debate</option>
-                          <option value="speech">Speech</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="form4-group">
-                <label for="specific-activity">Specific Activity</label>
-                <input
-                  type="text"
-                  id="specific-activity"
-                  value="School Newspaper - Editor"
-                />
-              </div>
-
-              <div class="form4-group">
-                <label for="achievement">Level of Achievement</label>
-                <div class="custom-select">
-                  <select id="achievement">
-                    <option value="international">International</option>
-                    <option value="national">National</option>
-                    <option value="regional">Regional</option>
-                    <option value="local">Local</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form4-group">
-                <label for="description">Description</label>
-                <textarea
-                  id="description"
-                  rows="5"
-                  placeholder="Text area"
-                ></textarea>
-              </div>
-
-              <div class="form4-row">
-                <div class="form4-group">
-                  <label for="years">Years of Participation</label>
-                  <input type="text" id="years" value="1 years" />
-                </div>
-
-                <div class="form4-group">
-                  <label for="hours">Hours per Week (average)</label>
-                  <input type="text" id="hours" value="2 hour" />
-                </div>
-              </div>
-            </form>
-          </div>
           <div class="form4-accordion-container">
-            <button class="form4-accordion">
-              <span>Add Leadership &amp; Clubs</span>
-              <i class="fas fa-plus"></i>
-            </button>
+            <div class="accordion-item">
+              <button class="form4-accordion">
+                <span>Academics & Intellectual Pursuits</span>
+                <i class="fas fa-plus"></i>
+              </button>
+              <div class="accordion-content">
+                <div class="profile-form-container container-grid">
+                  <h3 class="form-title">Academics & Intellectual Pursuits</h3>
+                  <form class="form">
+                    <div class="form-row">
+                      <div class="form4-group">
+                        <div class="form4-group-main">
+                          <div class="form4-first-label">
+                            <label for="type">Type</label>
+                          </div>
+                          <div class="form4-first-input">
+                            <div class="custom-select">
+                              <select id="type">
+                                <option value="olympiad">Olympiad</option>
+                                <option value="competition">Competition</option>
+                                <option value="research">Research</option>
+                              </select>
+                            </div>
+                            <div class="custom-select">
+                              <select id="activity">
+                                <option value="journalism">
+                                  Writing/Journalism
+                                </option>
+                                <option value="debate">Debate</option>
+                                <option value="speech">Speech</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-            <button class="form4-accordion">
-              <span>Add Community Service &amp; Volunteering</span>
-              <i class="fas fa-plus"></i>
-            </button>
+                    <div class="form4-group">
+                      <label for="specific-activity">Specific Activity</label>
+                      <input
+                        type="text"
+                        id="specific-activity"
+                        value="School Newspaper - Editor"
+                      />
+                    </div>
 
-            <button class="form4-accordion">
-              <span>Add STEM</span>
-              <i class="fas fa-plus"></i>
-            </button>
+                    <div class="form4-group">
+                      <label for="achievement">Level of Achievement</label>
+                      <div class="custom-select">
+                        <select id="achievement">
+                          <option value="international">International</option>
+                          <option value="national">National</option>
+                          <option value="regional">Regional</option>
+                          <option value="local">Local</option>
+                        </select>
+                      </div>
+                    </div>
 
-            <button class="form4-accordion">
-              <span>Add Arts &amp; Performance</span>
-              <i class="fas fa-plus"></i>
-            </button>
+                    <div class="form4-group">
+                      <label for="description">Description</label>
+                      <textarea
+                        id="description"
+                        rows="5"
+                        placeholder="Text area"
+                      ></textarea>
+                    </div>
 
-            <button class="form4-accordion">
-              <span>Add Work Experience &amp; Internships</span>
-              <i class="fas fa-plus"></i>
-            </button>
+                    <div class="form4-row">
+                      <div class="form4-group">
+                        <label for="years">Years of Participation</label>
+                        <input type="text" id="years" value="1 years" />
+                      </div>
 
-            <button class="form4-accordion">
-              <span>Add Work Experience &amp; Internships</span>
-              <i class="fas fa-plus"></i>
-            </button>
+                      <div class="form4-group">
+                        <label for="hours">Hours per Week (average)</label>
+                        <input type="text" id="hours" value="2 hour" />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="form4-accordion">
+                <span>Add Leadership &amp; Clubs</span>
+                <i class="fas fa-plus"></i>
+              </button>
+              <div class="accordion-content">
+                <div class="profile-form-container container-grid">
+                  <h3 class="form-title">Leadership & Clubs</h3>
+                  <form class="form">
+                    <div class="form-row">
+                      <div class="form4-group">
+                        <div class="form4-group-main">
+                          <div class="form4-first-label">
+                            <label for="leadership-type">Type</label>
+                          </div>
+                          <div class="form4-first-input">
+                            <div class="custom-select">
+                              <select id="leadership-type">
+                                <option value="student-government">
+                                  Student Government
+                                </option>
+                              </select>
+                            </div>
+                            <div class="custom-select">
+                              <select id="leadership-activity">
+                                <option value="president">
+                                  Student Body President
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-            <button class="form4-accordion">
-              <span>Add Work Experience &amp; Internships</span>
-              <i class="fas fa-plus"></i>
-            </button>
+                    <div class="form4-group">
+                      <label for="leadership-activity">Specific Activity</label>
+                      <input
+                        type="text"
+                        id="leadership-activity"
+                        value="Student Body President"
+                      />
+                    </div>
 
-            <button class="form4-accordion">
-              <span>Add College Preferences</span>
-              <i class="fas fa-plus"></i>
-            </button>
+                    <div class="form4-group">
+                      <label for="leadership-role">Leadership Role</label>
+                      <div class="custom-select">
+                        <select id="leadership-role">
+                          <option value="president">President</option>
+                        </select>
+                      </div>
+                    </div>
 
-            <button class="form4-accordion">
-              <span>Add Other</span>
-              <i class="fas fa-plus"></i>
-            </button>
+                    <div class="form4-group">
+                      <label for="leadership-description">Description</label>
+                      <textarea
+                        id="leadership-description"
+                        rows="5"
+                        placeholder="Tell us a bit about your experience"
+                      ></textarea>
+                    </div>
+
+                    <div class="form4-row">
+                      <div class="form4-group">
+                        <label for="leadership-years"
+                          >Years of Participation</label
+                        >
+                        <input
+                          type="text"
+                          id="leadership-years"
+                          value="2 years"
+                        />
+                      </div>
+
+                      <div class="form4-group">
+                        <label for="leadership-hours"
+                          >Hours per Week (average)</label
+                        >
+                        <input
+                          type="text"
+                          id="leadership-hours"
+                          value="5 hours"
+                        />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="form4-accordion">
+                <span>Add Community Service &amp; Volunteering</span>
+                <i class="fas fa-plus"></i>
+              </button>
+              <div class="accordion-content">
+                <div class="profile-form-container container-grid">
+                  <h3 class="form-title">Community Service & Volunteering</h3>
+                  <form class="form">
+                    <div class="form-row">
+                      <div class="form4-group">
+                        <div class="form4-group-main">
+                          <div class="form4-first-label">
+                            <label for="service-organization"
+                              >Organization</label
+                            >
+                          </div>
+                          <div class="form4-first-input">
+                            <div class="custom-select">
+                              <select id="service-organization">
+                                <option value="food-pantry">
+                                  Local Food Pantry
+                                </option>
+                              </select>
+                            </div>
+                            <div class="custom-select">
+                              <select id="service-type">
+                                <option value="hunger">
+                                  Hunger/Food Insecurity
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form4-group">
+                      <label for="service-role">Role/Position</label>
+                      <div class="custom-select">
+                        <select id="service-role">
+                          <option value="volunteer">Volunteer</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form4-group">
+                      <label for="service-description">Description</label>
+                      <textarea
+                        id="service-description"
+                        rows="5"
+                        placeholder="Tell us a bit about your experience"
+                      ></textarea>
+                    </div>
+
+                    <div class="form4-row">
+                      <div class="form4-group">
+                        <label for="service-years"
+                          >Years of Participation</label
+                        >
+                        <input type="text" id="service-years" value="3 years" />
+                      </div>
+
+                      <div class="form4-group">
+                        <label for="service-hours"
+                          >Hours per Week (average)</label
+                        >
+                        <input type="text" id="service-hours" value="4 hours" />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="form4-accordion">
+                <span>Add STEM</span>
+                <i class="fas fa-plus"></i>
+              </button>
+              <div class="accordion-content">
+                <div class="profile-form-container container-grid">
+                  <h3 class="form-title">STEM</h3>
+                  <form class="form">
+                    <div class="form-row">
+                      <div class="form4-group">
+                        <div class="form4-group-main">
+                          <div class="form4-first-label">
+                            <label for="stem-type">Type</label>
+                          </div>
+                          <div class="form4-first-input">
+                            <div class="custom-select">
+                              <select id="stem-type">
+                                <option value="research">Research</option>
+                              </select>
+                            </div>
+                            <div class="custom-select">
+                              <select id="stem-activity">
+                                <option value="renewable-energy">
+                                  Research on Renewable Energy & Sustainability
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form4-group">
+                      <label for="stem-involvement">Level of Achievement</label>
+                      <div class="custom-select">
+                        <select id="stem-involvement">
+                          <option value="regional">State/Regional</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form4-group">
+                      <label for="stem-description">Description</label>
+                      <textarea
+                        id="stem-description"
+                        rows="5"
+                        placeholder="Tell us a bit about your experience"
+                      ></textarea>
+                    </div>
+
+                    <div class="form4-row">
+                      <div class="form4-group">
+                        <label for="stem-years">Years of Participation</label>
+                        <input type="text" id="stem-years" value="2 years" />
+                      </div>
+
+                      <div class="form4-group">
+                        <label for="stem-hours">Hours per Week (average)</label>
+                        <input type="text" id="stem-hours" value="6 hours" />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="form4-accordion">
+                <span>Add Arts &amp; Performance</span>
+                <i class="fas fa-plus"></i>
+              </button>
+              <div class="accordion-content">
+                <div class="profile-form-container container-grid">
+                  <h3 class="form-title">Arts & Performance</h3>
+                  <form class="form">
+                    <div class="form-row">
+                      <div class="form4-group">
+                        <div class="form4-group-main">
+                          <div class="form4-first-label">
+                            <label for="arts-type">Type</label>
+                          </div>
+                          <div class="form4-first-input">
+                            <div class="custom-select">
+                              <select id="arts-type">
+                                <option value="visual-art">Visual Art</option>
+                              </select>
+                            </div>
+                            <div class="custom-select">
+                              <select id="arts-activity">
+                                <option value="painting">
+                                  Painting (Oil/Acrylic - Fine Art)
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form4-group">
+                      <label for="arts-involvement">Level of Achievement</label>
+                      <div class="custom-select">
+                        <select id="arts-involvement">
+                          <option value="regional">State/Regional</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form4-group">
+                      <label for="arts-description">Description</label>
+                      <textarea
+                        id="arts-description"
+                        rows="5"
+                        placeholder="Tell us a bit about your experience"
+                      ></textarea>
+                    </div>
+
+                    <div class="form4-row">
+                      <div class="form4-group">
+                        <label for="arts-years">Years of Participation</label>
+                        <input type="text" id="arts-years" value="4 years" />
+                      </div>
+
+                      <div class="form4-group">
+                        <label for="arts-hours">Hours per Week (average)</label>
+                        <input type="text" id="arts-hours" value="8 hours" />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="form4-accordion">
+                <span>Add Work Experience &amp; Internships</span>
+                <i class="fas fa-plus"></i>
+              </button>
+              <div class="accordion-content">
+                <div class="profile-form-container container-grid">
+                  <h3 class="form-title">Work Experience & Internships</h3>
+                  <form class="form">
+                    <div class="form-row">
+                      <div class="form4-group">
+                        <div class="form4-group-main">
+                          <div class="form4-first-label">
+                            <label for="work-employer"
+                              >Employer/Organization</label
+                            >
+                          </div>
+                          <div class="form4-first-input">
+                            <div class="custom-select">
+                              <select id="work-employer">
+                                <option value="xyz">XYZ Company</option>
+                              </select>
+                            </div>
+                            <div class="custom-select">
+                              <select id="work-position">
+                                <option value="marketing">
+                                  Marketing Intern
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form4-group">
+                      <label for="work-type">Type</label>
+                      <div class="custom-select">
+                        <select id="work-type">
+                          <option value="paid-internship">
+                            Paid Internship
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form4-group">
+                      <label for="work-responsibilities"
+                        >Responsibilities</label
+                      >
+                      <textarea
+                        id="work-responsibilities"
+                        rows="5"
+                        placeholder="Tell us a bit about your experience"
+                      ></textarea>
+                    </div>
+
+                    <div class="form4-group">
+                      <label for="work-skills">Skills Developed</label>
+                      <textarea
+                        id="work-skills"
+                        rows="5"
+                        placeholder="Tell us a bit about your experience"
+                      ></textarea>
+                    </div>
+
+                    <div class="form4-row">
+                      <div class="form4-group">
+                        <label for="work-years">Years of Participation</label>
+                        <input type="text" id="work-years" value="1 year" />
+                      </div>
+
+                      <div class="form4-group">
+                        <label for="work-hours">Hours per Week (average)</label>
+                        <input type="text" id="work-hours" value="12 hours" />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="form4-accordion">
+                <span>Add College Preferences</span>
+                <i class="fas fa-plus"></i>
+              </button>
+              <div class="accordion-content">
+                <div class="profile-form-container container-grid">
+                  <h3 class="form-title">College Preferences</h3>
+                  <form class="form">
+                    <div class="form-row">
+                      <div class="form4-group">
+                        <div class="form4-group-main">
+                          <div class="form4-first-label">
+                            <label for="college-major">Intended Major</label>
+                          </div>
+                          <div class="form4-first-input">
+                            <div class="custom-select">
+                              <select id="college-major">
+                                <option value="cs">
+                                  CS, Software Engineering
+                                </option>
+                              </select>
+                            </div>
+                            <div class="custom-select">
+                              <select id="college-major2">
+                                <option value="business">
+                                  Business Administration/Management
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form4-group">
+                        <div class="form4-group-main">
+                          <div class="form4-first-label">
+                            <label for="college-setting">Campus Setting</label>
+                          </div>
+                          <div class="form4-first-input">
+                            <div class="custom-select">
+                              <select id="college-setting">
+                                <option value="urban">Urban</option>
+                              </select>
+                            </div>
+                            <div class="custom-select">
+                              <select id="college-region">
+                                <option value="northeast">
+                                  Northeast, East
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form4-group">
+                        <div class="form4-group-main">
+                          <div class="form4-first-label">
+                            <label for="college-security"
+                              >Graduation Security</label
+                            >
+                          </div>
+                          <div class="form4-first-input">
+                            <div class="custom-select">
+                              <select id="college-security">
+                                <option value="safety">Safety</option>
+                              </select>
+                            </div>
+                            <div class="custom-select">
+                              <select id="college-test">
+                                <option value="yes">Yes</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="form-actions form2-btn">
             <a class="form-back" href="#">Back</a>
@@ -214,10 +668,8 @@
     <footer>
       <div class="container">
         <div class="footer-links">
-          <a href="#">Contact</a>
-          <a href="#">About Us</a>
-          <a href="#">Programs</a>
-          <a href="#">Services</a>
+          <a href="contact-us.html">Contact</a>
+          <a href="about-us.html">About Us</a>
         </div>
         <div class="social-links">
           <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -235,7 +687,9 @@
       </div>
     </footer>
 
+    <!-- Jquery  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>

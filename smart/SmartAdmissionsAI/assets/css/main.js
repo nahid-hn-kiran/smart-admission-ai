@@ -67,3 +67,12 @@ submitBtn.addEventListener("click", function () {
 });
 
 // Toggle switches functionality
+$("#desktop-menu-toggle").click(function () {
+  $("#desktop-menu").css("display", "block").animate({ left: "0" }, 300);
+});
+
+$("#menu-close").click(function () {
+  $("#mobile-menu").animate({ left: "-250px" }, 300, function () {
+    $(this).css("display", "none");
+  });
+});

@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="assets/css/typography.css" />
     <link rel="stylesheet" href="assets/css/components.css" />
     <link rel="stylesheet" href="assets/css/layout.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Anybody:wght@500;700&family=Exo+2:wght@500&family=M+PLUS+Rounded+1c&display=swap"
@@ -36,41 +36,62 @@
       <div class="container">
         <div class="header-content">
           <div class="logo">
-            <img src="assets/images/logo.svg" alt="SmartAdmissionsAI Logo" />
+            <a href="index.html"
+              ><img src="assets/images/logo.svg" alt="SmartAdmissionsAI Logo"
+            /></a>
           </div>
           <nav class="desktop-nav">
             <ul>
-              <li><a href="#" class="active">Home</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Programs</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="contact-us.html">Contact</a></li>
+              <div class="menu-toggler" id="desktop-menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+              </div>
             </ul>
+            <div class="menu-toggler" id="mobile-menu-toggle">
+              <i class="fa-solid fa-bars"></i>
+            </div>
           </nav>
-          <div class="auth-buttons">
-            <a href="#" class="btn btn-primary">Log in</a>
+        </div>
+      </div>
+      <!-- Desktop Sidebar -->
+      <div class="desktop-sidebar">
+        <div class="sidebar">
+          <button class="btn btn-info" id="desktop-menu-close">✖ Close</button>
+          <div class="sidebar-nav">
+            <a href="saved-essays-&-feedback.html">Saved Essays & Feedback </a>
+            <a href="essasy-upload.html">Upload Essay </a>
+            <a href="profile-&-account-settings.html">Profile & Settings </a>
+            <a href="applicant-information.html">Applicant Information </a>
+            <a href="premium-review.html">Premium Review </a>
+            <a href="pricing-plan.html">Pricing & Plans </a>
           </div>
-          <div class="mobile-menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+          <a class="btn btn-primary" href="login.html">Login</a>
+        </div>
+      </div>
+      <!-- Mobile Sidebar -->
+      <div class="mobile-sidebar">
+        <div class="sidebar">
+          <button class="btn btn-info" id="mobile-menu-close">✖ Close</button>
+          <div class="sidebar-nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="#">Dashboard </a>
+            <a href="saved-essays-&-feedback.html">Saved Essays & Feedback </a>
+            <a href="essasy-upload.html">Upload Essay </a>
+            <a href="profile-&-account-settings.html">Profile & Settings </a>
+            <a href="applicant-information.html">Applicant Information </a>
+            <a href="premium-review.html">Premium Review </a>
+            <a href="pricing-plan.html">Pricing & Plans </a>
+            <a class="btn btn-primary" href="login.html">Login</a>
           </div>
         </div>
-        <nav class="mobile-nav">
-          <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Programs</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
       </div>
     </header>
     <!-- Page Header -->
     <section class="pricing-plan-header page-header">
       <div class="container">
-        <div class="hero-form profile-hero">
+        <div class="hero-form-2 profile-hero">
           <h2 class="page-title">Our Pricing Plans</h2>
         </div>
       </div>
@@ -92,7 +113,7 @@
           <h3>Free AI Review</h3>
           <p class="price">Price: $0 (Free)</p>
           <a href="#" class="cta-btn">Use AI Review for Free</a>
-          <hr style="width: 100%; color: #a7c7e7" />
+          <hr style="width: 100%; color: #a7c7e7; margin: 0" />
           <ul>
             <li>
               Instant AI-generated feedback on clarity, structure, and grammar
@@ -126,7 +147,7 @@
           <h3>Upgrade to Premium</h3>
           <p class="price">Price: $20 per essay</p>
           <a href="#" class="cta-btn">Get Ultimate Coaching</a>
-          <hr style="width: 100%; color: #a7c7e7" />
+          <hr style="width: 100%; color: #a7c7e7; margin: 0" />
           <ul>
             <li>Everything in Premium Human Review</li>
             <li>One-on-one coaching session with expert</li>
@@ -292,10 +313,8 @@
     <footer>
       <div class="container">
         <div class="footer-links">
-          <a href="#">Contact</a>
-          <a href="#">About Us</a>
-          <a href="#">Programs</a>
-          <a href="#">Services</a>
+          <a href="contact-us.html">Contact</a>
+          <a href="about-us.html">About Us</a>
         </div>
         <div class="social-links">
           <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -313,7 +332,9 @@
       </div>
     </footer>
 
+    <!-- Jquery  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>

@@ -36,35 +36,56 @@
       <div class="container">
         <div class="header-content">
           <div class="logo">
-            <img src="assets/images/logo.svg" alt="SmartAdmissionsAI Logo" />
+            <a href="index.html"
+              ><img src="assets/images/logo.svg" alt="SmartAdmissionsAI Logo"
+            /></a>
           </div>
           <nav class="desktop-nav">
             <ul>
-              <li><a href="#" class="active">Home</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Programs</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="contact-us.html">Contact</a></li>
+              <div class="menu-toggler" id="desktop-menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+              </div>
             </ul>
+            <div class="menu-toggler" id="mobile-menu-toggle">
+              <i class="fa-solid fa-bars"></i>
+            </div>
           </nav>
-          <div class="auth-buttons">
-            <a href="#" class="btn btn-primary">Log in</a>
+        </div>
+      </div>
+      <!-- Desktop Sidebar -->
+      <div class="desktop-sidebar">
+        <div class="sidebar">
+          <button class="btn btn-info" id="desktop-menu-close">✖ Close</button>
+          <div class="sidebar-nav">
+            <a href="saved-essays-&-feedback.html">Saved Essays & Feedback </a>
+            <a href="essasy-upload.html">Upload Essay </a>
+            <a href="profile-&-account-settings.html">Profile & Settings </a>
+            <a href="applicant-information.html">Applicant Information </a>
+            <a href="premium-review.html">Premium Review </a>
+            <a href="pricing-plan.html">Pricing & Plans </a>
           </div>
-          <div class="mobile-menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+          <a class="btn btn-primary" href="login.html">Login</a>
+        </div>
+      </div>
+      <!-- Mobile Sidebar -->
+      <div class="mobile-sidebar">
+        <div class="sidebar">
+          <button class="btn btn-info" id="mobile-menu-close">✖ Close</button>
+          <div class="sidebar-nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="#">Dashboard </a>
+            <a href="saved-essays-&-feedback.html">Saved Essays & Feedback </a>
+            <a href="essasy-upload.html">Upload Essay </a>
+            <a href="profile-&-account-settings.html">Profile & Settings </a>
+            <a href="applicant-information.html">Applicant Information </a>
+            <a href="premium-review.html">Premium Review </a>
+            <a href="pricing-plan.html">Pricing & Plans </a>
+            <a class="btn btn-primary" href="login.html">Login</a>
           </div>
         </div>
-        <nav class="mobile-nav">
-          <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Programs</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
       </div>
     </header>
     <!-- login form area -->
@@ -81,8 +102,8 @@
               </div>
               <div class="container-grid">
                 <div class="login-singup-area">
-                  <a href="#" class="login-btn active">Log In</a>
-                  <a href="#" class="singup-btn">Sign Up</a>
+                  <a href="login.html" class="login-btn active">Log In</a>
+                  <a href="signup.html" class="singup-btn">Sign Up</a>
                 </div>
                 <button type="button" class="login-with-google-btn">
                   Sign in with Google
@@ -102,7 +123,7 @@
                 <a href="#" class="forget-btn">Forgot Password?</a>
               </div>
               <div class="login-page-btn">
-                <a href="#" class="btn btn-primary">Log in</a>
+                <a href="login.html" class="btn btn-primary">Log in</a>
               </div>
             </div>
           </div>
@@ -114,10 +135,8 @@
     <footer>
       <div class="container">
         <div class="footer-links">
-          <a href="#">Contact</a>
-          <a href="#">About Us</a>
-          <a href="#">Programs</a>
-          <a href="#">Services</a>
+          <a href="contact-us.html">Contact</a>
+          <a href="about-us.html">About Us</a>
         </div>
         <div class="social-links">
           <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -135,7 +154,9 @@
       </div>
     </footer>
 
+    <!-- Jquery  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>

@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="assets/css/typography.css" />
     <link rel="stylesheet" href="assets/css/components.css" />
     <link rel="stylesheet" href="assets/css/layout.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Anybody:wght@500;700&family=Exo+2:wght@500&family=M+PLUS+Rounded+1c&display=swap"
@@ -36,103 +36,109 @@
       <div class="container">
         <div class="header-content">
           <div class="logo">
-            <img src="assets/images/logo.svg" alt="SmartAdmissionsAI Logo" />
+            <a href="index.html"
+              ><img src="assets/images/logo.svg" alt="SmartAdmissionsAI Logo"
+            /></a>
           </div>
-          <nav class="desktop-nav">
-            <ul>
-              <li><a href="#" class="active">Home</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Programs</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
-          <div class="auth-buttons">
-            <a href="#" class="btn btn-primary">Log in</a>
-          </div>
-          <div class="mobile-menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
+          <div class="menu-toggler" id="dashboard-menu-toggle">
+            <i class="fa-solid fa-bars"></i>
           </div>
         </div>
-        <nav class="mobile-nav">
-          <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Programs</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
       </div>
     </header>
     <!-- dashboard information page start -->
-    <div class="dashboard-information">
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <div class="sidebar-nav">
-          <a href="#" class="active"> <i>📄</i> Saved Essays & Feedback </a>
-          <a href="#"> <i>👤</i> Profile & Account Settings </a>
-          <a href="#"> <i>ℹ️</i> Applicant Information </a>
+    <div class="container">
+      <div class="dashboard dashboard-information section-padding">
+        <!-- Sidebar -->
+        <div class="tablet-dashboard">
+          <div class="sidebar">
+            <button class="btn btn-info" id="dashboard-menu-close">
+              ✖ Close
+            </button>
+            <div class="sidebar-nav">
+              <a href="saved-essays-&-feedback.html" class="active">
+                <i class="fa-solid fa-book"></i> Saved Essays & Feedback
+              </a>
+              <a href="profile-&-account-settings.html">
+                <i class="fa-solid fa-user"></i> Profile & Account Settings
+              </a>
+              <a href="applicant-information.html">
+                <i class="fa-solid fa-circle-info"></i> Applicant Information
+              </a>
+            </div>
+            <div>
+              <button class="logout-btn">Log Out</button>
+            </div>
+          </div>
         </div>
-        <button class="logout-btn">Log Out</button>
-      </div>
 
-      <!-- Main content area -->
-      <div class="main-content">
-        <h1 class="dashboard-page-title">
-          Dynamic title based on the selected tab
-        </h1>
+        <!-- Main content area -->
+        <div class="container">
+          <div class="main-content">
+            <div class="section-grid">
+              <h2 class="section-subtitle">
+                Dynamic title based on the selected tab
+              </h2>
 
-        <div class="search-box">
-          <input type="text" placeholder="Search University" />
-        </div>
+              <div class="search-box">
+                <input type="text" placeholder="Search University" />
+              </div>
+            </div>
 
-        <table class="essay-table">
-          <thead>
-            <tr>
-              <th>Essay Title</th>
-              <th>Target University</th>
-              <th>Status</th>
-              <th>Latest Feedback</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Identity & Culture Essay</td>
-              <td>UNC Chapel Hill</td>
-              <td>
-                <span class="status-badge status-reviewed">Reviewed</span>
-              </td>
-              <td>Strong structure, expand on leadership role</td>
-              <td><a href="#" class="action-link">View Feedback</a></td>
-            </tr>
-            <tr>
-              <td>Leadership & Impact Essay</td>
-              <td>Harvard</td>
-              <td>
-                <span class="status-badge status-progress">In Progress</span>
-              </td>
-              <td>Pending AI Analysis</td>
-              <td><a href="#" class="action-link">Check Status</a></td>
-            </tr>
-            <tr>
-              <td>Personal Growth Essay</td>
-              <td>Stanford</td>
-              <td>
-                <span class="status-badge status-revision">Needs Revision</span>
-              </td>
-              <td>Improve storytelling impact</td>
-              <td><a href="#" class="action-link">Revise & Resubmit</a></td>
-            </tr>
-          </tbody>
-        </table>
+            <div class="eassy-table-section">
+              <table class="essay-table">
+                <thead>
+                  <tr>
+                    <th>Essay Title</th>
+                    <th>Target University</th>
+                    <th>Status</th>
+                    <th>Latest Feedback</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Identity & Culture Essay</td>
+                    <td>UNC Chapel Hill</td>
+                    <td>
+                      <span class="status-badge status-reviewed">Reviewed</span>
+                    </td>
+                    <td>Strong structure, expand on leadership role</td>
+                    <td><a href="#" class="action-link">View Feedback</a></td>
+                  </tr>
+                  <tr>
+                    <td>Leadership & Impact Essay</td>
+                    <td>Harvard</td>
+                    <td>
+                      <span class="status-badge status-progress"
+                        >In Progress</span
+                      >
+                    </td>
+                    <td>Pending AI Analysis</td>
+                    <td><a href="#" class="action-link">Check Status</a></td>
+                  </tr>
+                  <tr>
+                    <td>Personal Growth Essay</td>
+                    <td>Stanford</td>
+                    <td>
+                      <span class="status-badge status-revision"
+                        >Needs Revision</span
+                      >
+                    </td>
+                    <td>Improve storytelling impact</td>
+                    <td>
+                      <a href="#" class="action-link">Revise & Resubmit</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-        <div class="button-container">
-          <button class="button-primary">Upload a New Essay</button>
-          <button class="button-secondary">Download Feedback Report</button>
+            <div class="button-container">
+              <button class="btn btn-primary">Upload a New Essay</button>
+              <button class="btn btn-accent">Download Feedback Report</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -141,10 +147,8 @@
     <footer>
       <div class="container">
         <div class="footer-links">
-          <a href="#">Contact</a>
-          <a href="#">About Us</a>
-          <a href="#">Programs</a>
-          <a href="#">Services</a>
+          <a href="contact-us.html">Contact</a>
+          <a href="about-us.html">About Us</a>
         </div>
         <div class="social-links">
           <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -162,8 +166,10 @@
       </div>
     </footer>
 
+    <!-- Jquery  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- JavaScript -->
-    <script src="assets/js/main.js"></script>
+    <script src="./assets/js/main.js"></script>
 
     <script>
       // Toggle mobile menu
